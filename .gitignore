@@ -416,3 +416,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Cloudflare
+.wrangler/
+wrangler.toml.backup
+.dev.vars
+
+# macOS
+.DS_Store
