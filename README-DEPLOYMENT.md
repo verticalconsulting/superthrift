@@ -1,4 +1,4 @@
-# Cloudflare Deployment Guide
+# Cloudflare Deployment Guides
 
 This guide covers deploying SuperThrift to Cloudflare Pages.
 
