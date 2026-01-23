@@ -419,6 +419,7 @@ FodyWeavers.xsd
 
 # Cloudflare
 .wrangler/
+.cloudflare/
 wrangler.toml.backup
 .dev.vars
 

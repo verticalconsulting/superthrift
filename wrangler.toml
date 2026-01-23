@@ -1,14 +1,4 @@
+# Cloudflare Pages configuration
 name = "superthrift"
 compatibility_date = "2024-01-01"
-
-# Cloudflare Pages configuration
 pages_build_output_dir = "."
-
-[site]
-bucket = "."
-
-# For Workers Sites deployment
-# Uncomment if using Workers instead of Pages
-# [site]
-# bucket = "."
-# entry-point = "workers-site"
