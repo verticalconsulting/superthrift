@@ -3,240 +3,391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SuperThrift - Quality thrift stores in Pearl and Byram, Mississippi. Shop affordable clothing, furniture, and household items. Free donation pickup available.">
-    <meta name="keywords" content="thrift store, Pearl MS, Byram MS, secondhand store, donations, furniture, clothing, household items, Mississippi">
-    <title>SuperThrift - Quality Thrift Stores in Pearl & Byram, MS</title>
+    <meta name="description" content="SuperThrift - A mission-driven thrift store in Mississippi supporting community programs through Mercy House Adult &amp; Teen Challenge. Donate items or shop affordable finds.">
+    <meta name="keywords" content="thrift store Mississippi, donate furniture Mississippi, donate clothes near me, schedule donation pickup, Pearl MS, Byram MS">
+    <title>SuperThrift | Donate &amp; Shop Thrift in Mississippi | Mercy House</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <div class="logo">
+                <a href="#" class="logo">
                     <img src="images/logo.webp" alt="SuperThrift Mercy House" class="logo-img">
-                </div>
+                </a>
                 <nav class="main-nav">
-                    <a href="#locations">Locations</a>
                     <a href="#donate">Donate</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#shop">Shop</a>
+                    <a href="#locations">Locations</a>
+                    <a href="tel:6017683532" class="nav-phone">(601) 768-3532</a>
                 </nav>
+                <a href="tel:6017683532" class="mobile-phone-btn">Call Now</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
-                <h2>Your Favorite Thrift Store</h2>
-                <h3>Shop Smart, Save More</h3>
-                <p>Discover quality clothing, furniture, and household items at unbeatable prices</p>
+                <h1>Turning Donations Into Changed Lives</h1>
+                <p class="hero-subtext">A mission-driven thrift store in Mississippi supporting community programs through Mercy House Adult &amp; Teen Challenge.</p>
+
+                <ul class="hero-benefits">
+                    <li><span class="benefit-icon">&#10003;</span> Affordable finds</li>
+                    <li><span class="benefit-icon">&#10003;</span> Easy donations</li>
+                    <li><span class="benefit-icon">&#10003;</span> Local community impact</li>
+                </ul>
+
                 <div class="hero-buttons">
-                    <a href="#locations" class="btn btn-primary">Visit Our Stores</a>
-                    <a href="#donate" class="btn btn-secondary">Schedule Pickup</a>
+                    <a href="#donate" class="btn btn-primary btn-large">Donate Items</a>
+                    <a href="#shop" class="btn btn-secondary btn-large">Shop SuperThrift</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+        <div class="container">
+            <div class="trust-content">
+                <p class="trust-tagline">Serving Mississippi Communities</p>
+                <p class="trust-mission">Every purchase and donation helps fund life-enriching programs and community support across Mississippi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">&#128230;</div>
+                    <h3>Donate or Shop</h3>
+                    <p>Drop off items, schedule a pickup, or shop in-store.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">&#127991;</div>
+                    <h3>We Sort &amp; Sell</h3>
+                    <p>Donated goods become affordable finds for local families.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">&#10084;</div>
+                    <h3>Impact Is Funded</h3>
+                    <p>Proceeds support community programs and outreach.</p>
+                </div>
+            </div>
+            <div class="steps-cta">
+                <a href="#contact" class="btn btn-primary">Schedule a Pickup</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donate-section">
+        <div class="container">
+            <div class="donate-content">
+                <div class="donate-text">
+                    <h2>Donate to SuperThrift in Mississippi</h2>
+
+                    <div class="donate-items-grid">
+                        <div class="donate-item">
+                            <span class="donate-item-icon">&#128715;</span>
+                            <span>Furniture</span>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-item-icon">&#128085;</span>
+                            <span>Clothing</span>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-item-icon">&#127968;</span>
+                            <span>Home goods</span>
+                        </div>
+                        <div class="donate-item">
+                            <span class="donate-item-icon">&#128268;</span>
+                            <span>Appliances</span>
+                        </div>
+                    </div>
+
+                    <ul class="donate-benefits">
+                        <li><span class="check-icon">&#10003;</span> Easy pickup or drop-off</li>
+                        <li><span class="check-icon">&#10003;</span> Keep items out of landfills</li>
+                        <li><span class="check-icon">&#10003;</span> Support Mississippi communities</li>
+                        <li><span class="check-icon">&#10003;</span> Tax-deductible donations</li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary btn-large">Schedule Donation Pickup</a>
+                    <a href="#what-we-accept" class="link-arrow">What We Accept</a>
+                </div>
+                <div class="donate-image">
+                    <div class="image-placeholder donate-placeholder">
+                        <span>&#128230;</span>
+                        <p>Donation Photo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Accept -->
+    <section id="what-we-accept" class="what-we-accept">
+        <div class="container">
+            <h2 class="section-title">What We Accept</h2>
+            <div class="accept-grid">
+                <div class="accept-card">
+                    <span class="accept-icon">&#128085;</span>
+                    <h3>Clothing &amp; Shoes</h3>
+                    <p>Gently used clothing for men, women, and children</p>
+                </div>
+                <div class="accept-card">
+                    <span class="accept-icon">&#128715;</span>
+                    <h3>Furniture</h3>
+                    <p>Quality furniture pieces in good condition</p>
+                </div>
+                <div class="accept-card">
+                    <span class="accept-icon">&#127869;</span>
+                    <h3>Kitchenware</h3>
+                    <p>Dishes, cookware, and kitchen supplies</p>
+                </div>
+                <div class="accept-card">
+                    <span class="accept-icon">&#128218;</span>
+                    <h3>Books &amp; Toys</h3>
+                    <p>Books, games, and toys in good condition</p>
+                </div>
+                <div class="accept-card">
+                    <span class="accept-icon">&#128268;</span>
+                    <h3>Small Appliances</h3>
+                    <p>Working electronics and small appliances</p>
+                </div>
+                <div class="accept-card">
+                    <span class="accept-icon">&#127912;</span>
+                    <h3>Home Decor</h3>
+                    <p>Decorative items and home accessories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <div class="shop-content">
+                <div class="shop-text">
+                    <h2>Shop SuperThrift &mdash; Affordable Finds With Purpose</h2>
+                    <ul class="shop-benefits">
+                        <li><span class="check-icon">&#10003;</span> New items daily</li>
+                        <li><span class="check-icon">&#10003;</span> Local thrift savings</li>
+                        <li><span class="check-icon">&#10003;</span> Every purchase gives back</li>
+                    </ul>
+                    <div class="shop-buttons">
+                        <a href="#locations" class="btn btn-primary">Find a Location</a>
+                        <a href="#locations" class="btn btn-secondary">Shop SuperThrift</a>
+                    </div>
+                </div>
+                <div class="shop-images">
+                    <div class="shop-image-grid">
+                        <div class="image-placeholder shop-placeholder">
+                            <span>&#128722;</span>
+                            <p>Store Photo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact -->
+    <section class="community-impact">
+        <div class="container">
+            <div class="impact-content">
+                <div class="impact-image">
+                    <div class="image-placeholder impact-placeholder">
+                        <span>&#129309;</span>
+                        <p>Community Photo</p>
+                    </div>
+                </div>
+                <div class="impact-text">
+                    <h2>Community Impact</h2>
+                    <p class="impact-statement">SuperThrift turns generosity into opportunity, stability, and positive futures across Mississippi.</p>
+                    <div class="impact-stats">
+                        <div class="stat">
+                            <span class="stat-icon">&#9851;</span>
+                            <p>Thousands of items reused</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">&#128106;</span>
+                            <p>Local families served</p>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-icon">&#127968;</span>
+                            <p>Mississippi communities supported</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Locations Section -->
-    <section id="locations" class="locations">
+    <section id="locations" class="locations-section">
         <div class="container">
             <h2 class="section-title">Our Locations</h2>
             <div class="locations-grid">
                 <div class="location-card">
-                    <div class="location-icon">📍</div>
-                    <h3>SuperThrift Byram</h3>
-                    <div class="location-details">
-                        <p class="address">
-                            <strong>Address:</strong><br>
-                            6787 S Siwell Rd STE D, Byram, MS 39272
-                        </p>
-                        <p class="hours">
-                            <strong>Store Hours:</strong><br>
-                            Monday - Saturday: 8:00 AM - 6:00 PM<br>
-                            Sunday: Closed for Rest
-                        </p>
-                        <p class="phone">
-                            <strong>Phone:</strong><br>
-                            <a href="tel:601 768-3532">(601) 768-3532</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <div class="location-icon">📍</div>
                     <h3>SuperThrift Pearl</h3>
                     <div class="location-details">
                         <p class="address">
-                            <strong>Address:</strong><br>
-                            434 N Bierdeman Rd, Pearl, MS 39208
+                            <span class="loc-icon">&#128205;</span>
+                            434 N Bierdeman Rd<br>Pearl, MS 39208
                         </p>
                         <p class="hours">
-                            <strong>Store Hours:</strong><br>
-                            Monday - Saturday: 8:00 AM - 6:00 PM<br>
-                            Sunday: Closed for Rest
+                            <span class="loc-icon">&#128337;</span>
+                            Mon - Sat: 8:00 AM - 6:00 PM<br>
+                            Sunday: Closed
                         </p>
                         <p class="phone">
-                            <strong>Phone:</strong><br>
-                            <a href="tel:601 768-3532">(601) 768-3532</a>
+                            <span class="loc-icon">&#128222;</span>
+                            <a href="tel:6017683532">(601) 768-3532</a>
                         </p>
                     </div>
+                    <a href="https://maps.google.com/?q=434+N+Bierdeman+Rd+Pearl+MS+39208" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- What We Offer Section -->
-    <section class="offerings">
-        <div class="container">
-            <h2 class="section-title">What We Offer</h2>
-            <div class="offerings-grid">
-                <div class="offering-card">
-                    <div class="offering-icon">👕</div>
-                    <h3>Clothing</h3>
-                    <p>Men's, women's, and children's clothing in excellent condition</p>
-                </div>
-                <div class="offering-card">
-                    <div class="offering-icon">🛋️</div>
-                    <h3>Furniture</h3>
-                    <p>Quality furniture pieces for every room in your home</p>
-                </div>
-                <div class="offering-card">
-                    <div class="offering-icon">🏠</div>
-                    <h3>Household Items</h3>
-                    <p>Kitchen supplies, decor, electronics, and more</p>
-                </div>
-                <div class="offering-card">
-                    <div class="offering-icon">🎁</div>
-                    <h3>Special Finds</h3>
-                    <p>Unique treasures and collectibles</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Donation Section -->
-    <section id="donate" class="donate">
-        <div class="container">
-            <div class="donate-content">
-                <div class="donate-text">
-                    <h2>Donate Your Items</h2>
-                    <h3>Free Pickup Available</h3>
-                    <p>Your donations help support our mission and community programs. We accept:</p>
-                    <ul>
-                        <li>Gently used clothing and shoes</li>
-                        <li>Furniture in good condition</li>
-                        <li>Household items and kitchenware</li>
-                        <li>Books, toys, and games</li>
-                        <li>Small appliances and electronics</li>
-                    </ul>
-                    <p class="donate-note">All donations are tax-deductible. We provide donation receipts.</p>
-                    <a href="#contact" class="btn btn-primary">Schedule Free Pickup</a>
-                </div>
-                <div class="donate-image">
-                    <div class="video-container">
-                        <iframe
-                            width="560"
-                            height="315"
-                            src="https://www.youtube.com/embed/Eq9BILi9PK0"
-                            title="SuperThrift Video"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+                <div class="location-card">
+                    <h3>SuperThrift Byram</h3>
+                    <div class="location-details">
+                        <p class="address">
+                            <span class="loc-icon">&#128205;</span>
+                            6787 S Siwell Rd STE D<br>Byram, MS 39272
+                        </p>
+                        <p class="hours">
+                            <span class="loc-icon">&#128337;</span>
+                            Mon - Sat: 8:00 AM - 6:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                        <p class="phone">
+                            <span class="loc-icon">&#128222;</span>
+                            <a href="tel:6017683532">(601) 768-3532</a>
+                        </p>
                     </div>
+                    <a href="https://maps.google.com/?q=6787+S+Siwell+Rd+STE+D+Byram+MS+39272" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="why-choose">
+    <!-- Social Proof -->
+    <section class="social-proof">
         <div class="container">
-            <h2 class="section-title">Why Shop SuperThrift?</h2>
-            <div class="features-grid">
-                <div class="feature">
-                    <div class="feature-icon">💰</div>
-                    <h4>Great Prices</h4>
-                    <p>Quality items at affordable prices for every budget</p>
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Great prices and an even better mission. I love knowing my purchases help the community."</p>
+                    <p class="testimonial-author">- Pearl Customer</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">♻️</div>
-                    <h4>Sustainable Shopping</h4>
-                    <p>Reduce waste and support environmental sustainability</p>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The pickup service was so easy! They came right to my house and took everything."</p>
+                    <p class="testimonial-author">- Byram Donor</p>
                 </div>
-                <div class="feature">
-                    <div class="feature-icon">🏆</div>
-                    <h4>Quality Selection</h4>
-                    <p>Carefully curated items in excellent condition</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">❤️</div>
-                    <h4>Community Support</h4>
-                    <p>Your purchases and donations support local community programs</p>
+                <div class="testimonial-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Best thrift store in Mississippi. Always find quality items at amazing prices."</p>
+                    <p class="testimonial-author">- Regular Shopper</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Contact Us</h3>
-                    <p>Have questions or want to schedule a donation pickup?</p>
+                    <h2>Schedule a Pickup</h2>
+                    <p>Ready to donate? Fill out the form and we'll arrange a free pickup at your convenience.</p>
+
                     <div class="contact-methods">
                         <div class="contact-method">
-                            <strong>📞 Phone:</strong>
-                            <p><a href="tel:">(601) 768-3532</a> - Pearl Location</p>
-                            <p><a href="tel:">(601) 768-3532</a> - Byram Location</p>
+                            <span class="method-icon">&#128222;</span>
+                            <div>
+                                <strong>Call Us</strong>
+                                <p><a href="tel:6017683532">(601) 768-3532</a></p>
+                            </div>
                         </div>
                         <div class="contact-method">
-                            <strong>✉️ Email:</strong>
-                            <p><a href="mailto:info@mercyhouseatc.com">info@mercyhouseatc.com</a></p>
+                            <span class="method-icon">&#9993;</span>
+                            <div>
+                                <strong>Email Us</strong>
+                                <p><a href="mailto:info@mercyhouseatc.com">info@mercyhouseatc.com</a></p>
+                            </div>
                         </div>
                         <div class="contact-method">
-                            <strong>⏰ Pickup Hours:</strong>
-                            <p>Monday - Friday: 9:00 AM - 4:00 PM</p>
+                            <span class="method-icon">&#128337;</span>
+                            <div>
+                                <strong>Pickup Hours</strong>
+                                <p>Monday - Friday: 9 AM - 4 PM</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Schedule a Pickup</h3>
-                    <form>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(601) 555-0100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@email.com">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <label for="address">Pickup Address</label>
+                            <input type="text" id="address" name="address" placeholder="123 Main St, City, MS" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Address" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Location</option>
-                                <option value="byram">Byram Area</option>
+                            <label for="location">Preferred Location</label>
+                            <select id="location" name="location" required>
+                                <option value="">Select Area</option>
                                 <option value="pearl">Pearl Area</option>
+                                <option value="byram">Byram Area</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="What items are you donating?" rows="4" required></textarea>
+                            <label for="items">What items are you donating?</label>
+                            <textarea id="items" name="items" rows="3" placeholder="Furniture, clothing, household items..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Request Pickup</button>
+                        <button type="submit" class="btn btn-primary btn-full">Request Free Pickup</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Be Part of the Impact</h2>
+            <p>Your support today helps strengthen Mississippi communities.</p>
+            <div class="final-cta-buttons">
+                <a href="#contact" class="btn btn-primary btn-large">Donate Now</a>
+                <a href="#locations" class="btn btn-secondary btn-large">Shop SuperThrift</a>
             </div>
         </div>
     </section>
@@ -245,31 +396,36 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>SuperThrift</h4>
-                    <p>Quality thrift stores serving Pearl and Byram, Mississippi</p>
+                <div class="footer-section footer-about">
+                    <img src="images/logo.webp" alt="SuperThrift" class="footer-logo">
+                    <p>A ministry of Mercy House Adult &amp; Teen Challenge, serving Mississippi communities through affordable shopping and donation programs.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#locations">Locations</a></li>
                         <li><a href="#donate">Donate</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#locations">Locations</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Pearl Location</h4>
-                    <p>434 N Bierdeman Rd, Pearl, MS 39208</p>
-                    <p><a href="tel:(601) 768-3532">(601) 768-3532</a></p>
+                    <p>434 N Bierdeman Rd<br>Pearl, MS 39208</p>
+                    <p><a href="tel:6017683532">(601) 768-3532</a></p>
                 </div>
                 <div class="footer-section">
                     <h4>Byram Location</h4>
-                    <p>6787 S Siwell Rd STE D, Byram, MS 39272</p>
-                    <p><a href="tel:(601) 768-3532">(601) 768-3532</a></p>
+                    <p>6787 S Siwell Rd STE D<br>Byram, MS 39272</p>
+                    <p><a href="tel:6017683532">(601) 768-3532</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 SuperThrift. Designed by FIVE HUGHES LLC All rights reserved.</p>
+                <p>&copy; 2026 SuperThrift. A ministry of Mercy House Adult &amp; Teen Challenge.</p>
+                <p>Designed by <a href="https://fivehughes.com" target="_blank" rel="noopener">FIVE HUGHES LLC</a></p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
             </div>
         </div>
     </footer>
