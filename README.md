@@ -28,7 +28,9 @@ This static HTML/CSS website features:
 - **Trust Elements**: 501(c)(3) badge, testimonials, community impact
 
 ### Functionality
-- **Contact Form**: Donation pickup scheduling (static HTML, needs backend)
+- **Contact Form**: Donation pickup scheduling powered by Formspree
+  - Full form in contact section with pickup details
+  - Floating popup widget for quick contact
 - **Two Locations**: Pearl (434 N Bierdeman Rd) and Byram (6787 S Siwell Rd)
 - **Store Hours**: Mon-Sat 8:00 AM - 6:00 PM, Sunday Closed
 - **Phone**: (601) 768-3532
@@ -68,7 +70,7 @@ To customize the site:
 2. **Change Colors**: Modify CSS custom properties in `css/styles.css` (lines 10-55)
 3. **Replace Images**: See image references in CLAUDE.md
 4. **Update Hours**: Modify store hours in locations section
-5. **Form Backend**: Add form service (Formspree, Netlify Forms) to contact form
+5. **Form Configuration**: Update Formspree endpoint in form action and Formbutton script
 
 ## File Structure
 

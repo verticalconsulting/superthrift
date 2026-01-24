@@ -2,6 +2,18 @@
 
 ## 2026-01-24 - Documentation Consolidation & Bug Fixes
 
+### New Features
+- ✅ **Formspree Integration**: Connected donation pickup form to Formspree endpoint
+  - Updated main contact form with action: `https://formspree.io/f/xzdekbzd`
+  - Added hidden `_subject` field for email customization
+  - Made email field required for better lead capture
+  - Removed old placeholder Formspree subscribe section
+- ✅ **Formbutton Widget**: Added floating contact button in bottom-right corner
+  - Quick contact popup for users anywhere on page
+  - Custom styling with brand red (#dc2626)
+  - Same Formspree endpoint for unified inbox
+  - Fields: Name, Email, Phone, Message
+
 ### Bug Fixes
 - ✅ **Fixed hero image reference mismatch**: Updated `index.html` and `styles.css` to correctly reference `superthrift-store.png` instead of `superthrift-store (2).png`
 

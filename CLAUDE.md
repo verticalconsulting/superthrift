@@ -76,10 +76,16 @@ CSS custom properties in `:root` (lines 10-55 in `css/styles.css`):
 - **Hours:** Mon-Sat 8:00 AM - 6:00 PM, Sunday Closed
 
 ### Form Handling
-The contact form is static HTML. To make it functional:
-1. Add a form service (Formspree, Netlify Forms, or custom endpoint)
-2. Update the `action` attribute on the form element
-3. Add client-side validation if needed
+The donation pickup form is integrated with Formspree:
+- **Primary Form**: Full donation pickup form in contact section
+  - Action: `https://formspree.io/f/xzdekbzd`
+  - Fields: Name, Phone, Email, Pickup Address, Preferred Location, Items
+  - Hidden field: `_subject` for email subject customization
+- **Popup Widget**: Formbutton widget (floating button in bottom-right)
+  - Quick contact option for users
+  - Same Formspree endpoint
+  - Custom styling with brand colors (#dc2626 red)
+  - Fields: Name, Email, Phone, Message
 
 ## Google Ads Optimization
 
