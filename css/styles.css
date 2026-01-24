@@ -228,7 +228,18 @@ body {
     right: 0;
     bottom: 0;
     background: url('../images/hero2.png') center/cover no-repeat;
-    opacity: 0.15;
+}
+
+.hero-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+        rgba(30, 64, 175, 0.85) 0%,
+        rgba(220, 38, 38, 0.85) 100%);
 }
 
 .hero-content {
@@ -244,6 +255,7 @@ body {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: var(--space-sm);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtext {
