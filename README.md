@@ -1,24 +1,38 @@
 # SuperThrift Landing Page
 
-A clean, modern landing page for SuperThrift thrift stores in Pearl and Brandon, Mississippi.
+A high-conversion, Google Ads optimized landing page for SuperThrift thrift stores in Pearl and Byram, Mississippi. SuperThrift is a ministry of Mercy House Adult & Teen Challenge, a 501(c)(3) nonprofit organization.
 
 ## Overview
 
-This is a single-page website designed for SuperThrift, featuring:
-- Store locations and hours
-- Donation information with free pickup scheduling
-- Contact forms
-- Responsive design for all devices
-- SEO-optimized content
+This static HTML/CSS website features:
+- **Two Store Locations**: Pearl and Byram, Mississippi
+- **Donation Pickup Scheduling**: Free pickup service with tax receipt
+- **501(c)(3) Verification**: GuideStar Platinum Seal of Transparency
+- **Mobile-First Design**: Optimized for all devices
+- **Performance Optimized**: LCP optimization with resource hints and lazy loading
+- **Google Ads Compliant**: Content carefully crafted to meet advertising guidelines
 
-## Features
+## Key Features
 
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Google Ads Friendly**: Content optimized to avoid problematic keywords
-- **Fast Loading**: Minimal dependencies, optimized performance
-- **Contact Forms**: Easy donation pickup scheduling
-- **Location Information**: Details for both Pearl and Brandon locations
+### Performance & SEO
+- **LCP Optimized**: Hero image and logo preloaded with `fetchpriority="high"`
+- **Lazy Loading**: Below-fold images load on demand
+- **Mobile-First CSS**: Optimized for mobile performance
+- **No JavaScript Required**: Pure HTML/CSS for maximum speed
+- **Google Ads Compliant**: No addiction/treatment language
+
+### Design & UX
+- **Gradient Overlay Hero**: Blue-to-red gradient ensures text readability
+- **Responsive Design**: Perfect on all devices
+- **Visual Hierarchy**: 12 strategically ordered sections
+- **Trust Elements**: 501(c)(3) badge, testimonials, community impact
+
+### Functionality
+- **Contact Form**: Donation pickup scheduling (static HTML, needs backend)
+- **Two Locations**: Pearl (434 N Bierdeman Rd) and Byram (6787 S Siwell Rd)
+- **Store Hours**: Mon-Sat 8:00 AM - 6:00 PM, Sunday Closed
+- **Phone**: (601) 768-3532
+- **Email**: info@mercyhouseatc.com
 
 ## Getting Started
 
@@ -30,7 +44,17 @@ This is a single-page website designed for SuperThrift, featuring:
 
 ### Deployment
 
-You can deploy this site to any web hosting service:
+**Automated Cloudflare Pages Deployment** (Recommended):
+This site deploys automatically via GitHub Actions on every push to `main`.
+
+**Setup Steps:**
+1. Add these secrets in GitHub repository settings:
+   - `CLOUDFLARE_API_TOKEN` - Create at Cloudflare Dashboard > My Profile > API Tokens
+   - `CLOUDFLARE_ACCOUNT_ID` - Found in Cloudflare Dashboard URL or Overview page
+2. Create a Cloudflare Pages project named `superthrift`
+3. Push to `main` branch to trigger deployment
+
+**Alternative Options:**
 - GitHub Pages
 - Netlify
 - Vercel
@@ -38,22 +62,37 @@ You can deploy this site to any web hosting service:
 
 ### Customization
 
-To customize the site for your needs:
+To customize the site:
 
-1. **Update Contact Information**: Edit phone numbers, emails, and addresses in `index.html`
-2. **Change Colors**: Modify CSS variables in `css/styles.css` (lines 10-22)
-3. **Add Logo**: Replace placeholder with your logo image in the header section
-4. **Update Hours**: Modify store hours in the locations section
+1. **Update Contact Information**: Edit phone, email, addresses in `index.html`
+2. **Change Colors**: Modify CSS custom properties in `css/styles.css` (lines 10-55)
+3. **Replace Images**: See image references in CLAUDE.md
+4. **Update Hours**: Modify store hours in locations section
+5. **Form Backend**: Add form service (Formspree, Netlify Forms) to contact form
 
 ## File Structure
 
 ```
 superthrift/
-├── index.html          # Main landing page
+├── index.html          # Main landing page (Google Ads optimized)
+├── privacy.html        # Privacy policy (required for Google Ads)
+├── README.md           # This file - project overview
+├── CLAUDE.md           # Development guide for Claude Code
 ├── css/
-│   └── styles.css      # All styling
-├── images/             # Image assets (add your images here)
-└── README.md           # This file
+│   └── styles.css      # Mobile-first CSS with custom properties
+├── images/
+│   ├── logo.webp                           # SuperThrift header logo
+│   ├── superthrift-store.png               # Hero background image
+│   ├── donation-photo.webp                 # Donation section (above-fold)
+│   ├── store-interior.webp                 # Shop section (below-fold)
+│   ├── community-impact-pearl-brandon.png  # Community impact (below-fold)
+│   ├── superthrift_full_logo_red_512x512.png  # Full color logo
+│   ├── hero2.png                           # Alternative hero image
+│   ├── donor-pickup.png                    # Donation pickup imagery
+│   └── store-interior.jpeg                 # Store interior JPEG
+└── .github/
+    └── workflows/
+        └── deploy.yml  # Cloudflare Pages deployment automation
 ```
 
 ## Browser Support
@@ -68,8 +107,38 @@ superthrift/
 
 See LICENSE file for details.
 
+## Technical Details
+
+### CSS Design System
+- **Primary**: `#dc2626` (red) - CTAs, emphasis
+- **Secondary**: `#1d4ed8` (blue) - Hero, links
+- **Success**: `#059669` (green) - Checkmarks
+- **Gold**: `#d97706` (yellow) - Stars, accents
+
+### Performance Optimizations
+- Hero background and logo preloaded with `fetchpriority="high"`
+- Below-fold images use `loading="lazy"`
+- WebP image format for smaller file sizes
+- No JavaScript frameworks
+- Gradient overlay for hero text readability
+
+### Google Ads Compliance
+- ✅ No addiction, rehab, recovery, treatment language
+- ✅ Privacy policy linked in footer
+- ✅ Contact information visible
+- ✅ 501(c)(3) verification displayed
+- ✅ No misleading claims
+
 ## Contact
 
-For questions about this website, contact SuperThrift:
-- Pearl Location: (601) 555-0100
-- Brandon Location: (601) 555-0101
+**SuperThrift Locations:**
+- **Pearl**: 434 N Bierdeman Rd, Pearl, MS 39208
+- **Byram**: 6787 S Siwell Rd STE D, Byram, MS 39272
+- **Phone**: (601) 768-3532
+- **Email**: info@mercyhouseatc.com
+- **Hours**: Mon-Sat 8:00 AM - 6:00 PM, Sunday Closed
+
+**Mercy House Adult & Teen Challenge:**
+- 501(c)(3) Nonprofit Organization
+- EIN: 45-4670832
+- GuideStar Platinum Seal of Transparency

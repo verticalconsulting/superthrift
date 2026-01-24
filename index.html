@@ -8,7 +8,7 @@
     <title>SuperThrift | Donate &amp; Shop Thrift in Mississippi | Mercy House</title>
 
     <!-- Preload critical resources for LCP optimization -->
-    <link rel="preload" as="image" href="images/superthrift-store (2).png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/superthrift-store.png" fetchpriority="high">
     <link rel="preload" as="image" href="images/logo.webp" fetchpriority="high">
 
     <link rel="stylesheet" href="css/styles.css">
@@ -304,6 +304,58 @@
             </div>
         </div>
     </section>
+
+    <!--Formspree subscribe section-->
+    <form
+  action="https://formspree.io/f/{FORM_ID}"
+  class="fs-form"
+  target="_top"
+  method="POST"
+>
+  <div class="fs-field">
+    <label class="fs-label" for="name">Full Name</label>
+    <input
+      class="fs-input"
+      id="name"
+      name="name"
+      placeholder="Enter your name (optional)"
+    />
+  </div>
+  <div class="fs-field">
+    <label class="fs-label" for="email">Email Address</label>
+    <input
+      class="fs-input"
+      id="email"
+      name="email"
+      placeholder="Enter your email address"
+      required
+    />
+  </div>
+  <div class="fs-checkbox-field col-span-full">
+    <div class="fs-checkbox-wrapper">
+      <input
+        aria-describedby="email-consent-description"
+        class="fs-checkbox"
+        id="email-consent"
+        name="email-consent"
+        required
+        type="checkbox"
+        value="yes"
+      />
+    </div>
+    <div>
+      <label class="fs-label" for="email-consent">
+        Consent to Receive Emails
+      </label>
+      <p class="fs-description" id="email-consent-description">
+        I agree to receive communications from [Company Name].
+      </p>
+    </div>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Subscribe</button>
+  </div>
+</form>
 
     <!-- Contact Form Section -->
     <section id="contact" class="contact-section">
