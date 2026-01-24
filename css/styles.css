@@ -227,7 +227,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/superthrift-store.png') center/cover no-repeat;
+    background: url('../images/hero2.png') center/cover no-repeat;
     opacity: 0.15;
 }
 
@@ -505,6 +505,14 @@ body {
 .donate-image {
     display: flex;
     justify-content: center;
+}
+
+.donate-photo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
 }
 
 .image-placeholder {
