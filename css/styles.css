@@ -1421,6 +1421,118 @@ fieldset {
 }
 
 /* =========================================
+   THANK YOU PAGE
+   ========================================= */
+.thank-you-section {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    padding: var(--space-2xl) 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.thank-you-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.thank-you-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success);
+    color: var(--white);
+    font-size: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.thank-you-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: var(--space-xs);
+}
+
+.thank-you-content h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: var(--space-md);
+}
+
+.thank-you-message {
+    font-size: 1rem;
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.thank-you-divider {
+    height: 75px;
+}
+
+.thank-you-cta-text {
+    font-size: 1rem;
+    color: var(--gray-700);
+    margin-bottom: var(--space-sm);
+}
+
+.thank-you-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .thank-you-content h1 {
+        font-size: 2rem;
+    }
+
+    .thank-you-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .thank-you-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .thank-you-actions {
+        flex-direction: column;
+    }
+
+    .thank-you-actions .btn {
+        width: 100%;
+    }
+}
+
+/* =========================================
    FOOTER
    ========================================= */
 .footer {
@@ -1439,10 +1551,25 @@ fieldset {
     max-width: 300px;
 }
 
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
 .footer-logo {
     height: 50px;
-    margin-bottom: var(--space-sm);
     filter: brightness(0) invert(1);
+}
+
+.footer-logo.mercy-house-logo {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo.mercy-house-logo:hover {
+    transform: scale(1.05);
 }
 
 .footer-section h4 {

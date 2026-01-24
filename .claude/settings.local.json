@@ -6,7 +6,9 @@
       "Bash(git push:*)",
       "Bash(dir:*)",
       "Read(//g/My Drive/Mercy House Files/brand_guilde/SuperThrift/logos/**)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Read(//g/My Drive/Mercy House Files/brand_guilde/Logos/**)",
+      "Bash(copy:*)"
     ],
     "deny": [],
     "ask": []
