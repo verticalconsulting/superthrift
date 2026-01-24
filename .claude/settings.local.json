@@ -8,7 +8,8 @@
       "Read(//g/My Drive/Mercy House Files/brand_guilde/SuperThrift/logos/**)",
       "Bash(ls:*)",
       "Read(//g/My Drive/Mercy House Files/brand_guilde/Logos/**)",
-      "Bash(copy:*)"
+      "Bash(copy:*)",
+      "Read(//c/Users/ogDevOps/Desktop/**)"
     ],
     "deny": [],
     "ask": []
