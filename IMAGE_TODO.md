@@ -34,7 +34,7 @@ The new landing page has placeholder areas for images. To maximize conversions a
 ```
 With:
 ```html
-<img src="images/donation-photo.webp" alt="SuperThrift donation pickup" style="width: 100%; max-width: 350px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+<img src="images/d onation-photo.webp" alt="SuperThrift donation pickup" style="width: 100%; max-width: 350px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
 ```
 
 ---
