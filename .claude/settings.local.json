@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nFix Cloudflare Pages deployment configuration\n\n- Remove Workers [site] configuration from wrangler.toml\n- Keep only Pages-specific configuration\n- Add .cloudflare/ directory to gitignore\n- GitHub Actions already correctly uses cloudflare/pages-action\n\nThis fixes the \"Workers-specific command in Pages project\" error.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(dir:*)",
+      "Read(//g/My Drive/Mercy House Files/brand_guilde/SuperThrift/logos/**)"
     ],
     "deny": [],
     "ask": []
