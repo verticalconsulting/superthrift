@@ -6,6 +6,11 @@
     <meta name="description" content="SuperThrift - A mission-driven thrift store in Mississippi supporting community programs through Mercy House Adult &amp; Teen Challenge. Donate items or shop affordable finds.">
     <meta name="keywords" content="thrift store Mississippi, donate furniture Mississippi, donate clothes near me, schedule donation pickup, Pearl MS, Byram MS">
     <title>SuperThrift | Donate &amp; Shop Thrift in Mississippi | Mercy House</title>
+
+    <!-- Preload critical resources for LCP optimization -->
+    <link rel="preload" as="image" href="images/superthrift-store (2).png" fetchpriority="high">
+    <link rel="preload" as="image" href="images/logo.webp" fetchpriority="high">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,7 +134,7 @@
                     <a href="#what-we-accept" class="link-arrow">What We Accept</a>
                 </div>
                 <div class="donate-image">
-                    <img src="images/donation-photo.webp" alt="SuperThrift donation items" class="donate-photo">
+                    <img src="images/donation-photo.webp" alt="SuperThrift donation items" class="donate-photo" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -192,7 +197,7 @@
                 </div>
                 <div class="shop-images">
                     <div class="shop-image-grid">
-                        <img src="images/store-interior.webp" alt="SuperThrift store interior" class="shop-photo">
+                        <img src="images/store-interior.webp" alt="SuperThrift store interior" class="shop-photo" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -204,7 +209,7 @@
         <div class="container">
             <div class="impact-content">
                 <div class="impact-image">
-                    <img src="images/community-impact-pearl-brandon.png" alt="SuperThrift community impact - Pearl and Brandon" class="impact-photo">
+                    <img src="images/community-impact-pearl-brandon.png" alt="SuperThrift community impact - Pearl and Brandon" class="impact-photo" loading="lazy">
                 </div>
                 <div class="impact-text">
                     <h2>Community Impact</h2>
