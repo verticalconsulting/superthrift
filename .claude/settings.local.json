@@ -9,7 +9,8 @@
       "Bash(ls:*)",
       "Read(//g/My Drive/Mercy House Files/brand_guilde/Logos/**)",
       "Bash(copy:*)",
-      "Read(//c/Users/ogDevOps/Desktop/**)"
+      "Read(//c/Users/ogDevOps/Desktop/**)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
