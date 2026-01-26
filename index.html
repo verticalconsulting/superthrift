@@ -351,7 +351,7 @@
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" action="https://formspree.io/f/xzdekbzd" method="POST">
+                    <form class="contact-form" action="https://formspree.io/f/xzdekbzd" method="POST" id="donation-form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" placeholder="John Smith" required>
@@ -455,6 +455,18 @@
         </div>
     </footer>
 
+    <!-- Google Ads Conversion Tracking -->
+    <script>
+      document.getElementById('donation-form').addEventListener('submit', function() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17766361797/BLGACM-42OwbELSAmL5C',
+          'event_callback': function() {
+            // Form will submit naturally after conversion is tracked
+          }
+        });
+      });
+    </script>
+
     <!-- Formspree Formbutton Widget -->
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
@@ -501,6 +513,12 @@
           button: {
             backgroundColor: "#dc2626"
           }
+        },
+        onSubmit: function() {
+          // Track conversion for Formbutton widget
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17766361797/BLGACM-42OwbELSAmL5C'
+          });
         }
       });
     </script>
