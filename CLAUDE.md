@@ -18,8 +18,10 @@ The site deploys automatically to Cloudflare Pages via GitHub Actions on every p
 2. Create a Cloudflare Pages project named `superthrift`
 3. Push to `main` branch to trigger deployment
 
+**Known gotcha**: The Cloudflare Pages dashboard sometimes gets misconfigured with the Workers deploy command (`npx wrangler deploy`) instead of the Pages one. If dashboard-triggered deploys fail with a "Workers-specific command" error, either leave the dashboard's Deploy command blank (auto-detect) or set it to `npx wrangler pages deploy .`, and consider disabling Cloudflare's own branch deployments in favor of the GitHub Actions workflow, which is already configured correctly. See `CLOUDFLARE_FIX.md`.
+
 ### Local Development
-Open `index.html` directly in a web browser. No build process required.
+Open `index.html` directly in a web browser. No build process required. `wrangler` is present as a devDependency (`npm install`) if you want to preview via `npx wrangler pages dev .` instead. `npm test` is a stub (no tests exist).
 
 ## Code Architecture
 
@@ -27,9 +29,13 @@ Open `index.html` directly in a web browser. No build process required.
 ```
 superthrift/
 ├── index.html          # Main landing page (Google Ads optimized)
-├── privacy.html        # Privacy policy (required for Google Ads)
-├── README.md           # Project overview and setup instructions
-├── CLAUDE.md           # This file - development guide
+├── privacy-policy.html # Current, indexed privacy policy (linked from footer, in sitemap.xml)
+├── privacy.html         # Legacy privacy policy duplicate — noindex, canonical points to privacy-policy.html; kept for old inbound links
+├── thank-you.html       # Post-submission redirect target for the donation form (see Form Handling)
+├── robots.txt           # Points crawlers to sitemap.xml
+├── sitemap.xml           # Lists index.html and privacy-policy.html
+├── README.md            # Project overview and setup instructions
+├── CLAUDE.md            # This file - development guide
 ├── css/
 │   └── styles.css      # Mobile-first CSS with custom properties
 ├── images/
@@ -81,6 +87,7 @@ The donation pickup form is integrated with Formspree:
   - Action: `https://formspree.io/f/xzdekbzd`
   - Fields: Name, Phone, Email, Pickup Address, Preferred Location, Items
   - Hidden field: `_subject` for email subject customization
+  - Hidden field: `_next` redirects to `thank-you.html` on successful submission
 - **Popup Widget**: Formbutton widget (floating button in bottom-right)
   - Quick contact option for users
   - Same Formspree endpoint
@@ -152,10 +159,11 @@ Edit CSS custom properties in `css/styles.css` (lines 10-55)
 
 ### Update Images
 All placeholder images have been replaced with actual photography:
-- ✅ Hero background: `superthrift-store (2).png` (needs file correction)
+- ✅ Hero background: `superthrift-store.png`
 - ✅ Logo: `logo.webp`
 - ✅ Donation section: `donation-photo.webp`
 - ✅ Shop section: `store-interior.webp`
 - ✅ Community impact: `community-impact-pearl-brandon.png`
 
-**Note**: The hero image reference in `index.html` points to `superthrift-store (2).png` but the file doesn't exist. Either rename the existing file or update the HTML reference.
+### Update Privacy Policy
+`privacy-policy.html` is the live, indexed page (linked from the footer and `sitemap.xml`) — edit that one. `privacy.html` is a legacy duplicate kept only for old inbound links; it's `noindex` and its canonical tag points to `privacy-policy.html`, so it generally doesn't need to be kept in sync.
