@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Thank you for contacting SuperThrift - We'll be in touch soon!">
+    <meta name="robots" content="noindex,follow">
     <title>Thank You | SuperThrift</title>
 
     <link rel="canonical" href="https://mercyhouseatc.superthriftdeals.org/thank-you.html" />
@@ -12,6 +13,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17766361797"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17766361797');
+      gtag('config', 'AW-17847156788');
+
+      /* Fires only when a real, Formspree-accepted submission lands here —
+         more accurate than tracking on submit-click, which can't tell
+         whether Formspree actually accepted the lead. */
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17766361797/BLGACM-42OwbELSAmL5C'
+      });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -99,7 +118,7 @@
                 <p>&copy; 2026 SuperThrift. A ministry of Mercy House Adult &amp; Teen Challenge.</p>
                 <p>Designed by <a href="https://verticalconsulting.net" target="_blank" rel="noopener">FIVE HUGHES LLC</a></p>
                 <div class="footer-links">
-                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
@@ -149,6 +168,12 @@
           button: {
             backgroundColor: "#dc2626"
           }
+        },
+        onSubmit: function() {
+          // Track conversion for Formbutton widget
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17766361797/BLGACM-42OwbELSAmL5C'
+          });
         }
       });
     </script>

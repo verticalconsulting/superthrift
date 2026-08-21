@@ -58,6 +58,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Offset anchor jumps so content doesn't land under the sticky header
+   (matters for #schedule-pickup and other nav/CTA anchor targets) */
+#how,
+#donate,
+#what-we-accept,
+#shop,
+#locations,
+#contact,
+#schedule-pickup {
+    scroll-margin-top: 100px;
+}
+
 body {
     font-family: var(--font-family);
     font-size: 16px;
@@ -227,7 +239,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/superthrift-store.png') center/cover no-repeat;
+    background: url('../images/superthrift-store.webp') center/cover no-repeat;
 }
 
 .hero-bg::after {
