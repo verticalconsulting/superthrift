@@ -1,0 +1,8 @@
+/css/*
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/images/*
+  Cache-Control: public, max-age=2592000, must-revalidate
+
+/videos/*
+  Cache-Control: public, max-age=2592000, must-revalidate
