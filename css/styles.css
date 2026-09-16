@@ -65,6 +65,8 @@ html {
 #what-we-accept,
 #shop,
 #locations,
+#donation-faq,
+#byram-location,
 #contact,
 #schedule-pickup {
     scroll-margin-top: 100px;
@@ -642,6 +644,87 @@ body {
 @media (min-width: 1024px) {
     .accept-grid {
         grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.direct-answer,
+.section-intro {
+    max-width: 850px;
+    margin: 0 auto var(--space-lg);
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.direct-answer a,
+.section-intro a,
+.faq-card a,
+.noscript-answer a {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* =========================================
+   DONATION FAQ
+   ========================================= */
+.faq-section {
+    padding: var(--space-xl) 0;
+    background: var(--gray-50);
+}
+
+.faq-grid {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+.faq-card {
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-card h3 {
+    color: var(--gray-900);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-xs);
+}
+
+.faq-card p {
+    margin-bottom: var(--space-xs);
+}
+
+.booking-steps {
+    margin: var(--space-sm) 0 var(--space-lg) 1.25rem;
+}
+
+.booking-steps li {
+    margin-bottom: 0.4rem;
+}
+
+.noscript-answer {
+    padding: var(--space-lg) 0;
+    background: #fff7ed;
+    border-top: 3px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+}
+
+.noscript-answer h2,
+.noscript-answer p {
+    margin-bottom: var(--space-xs);
+}
+
+.hero-subtext a {
+    color: var(--white);
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq-card:last-child {
+        grid-column: 1 / -1;
     }
 }
 
