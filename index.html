@@ -34,13 +34,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17766361797"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17847156788"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'AW-17766361797');
       gtag('config', 'AW-17847156788');
     </script>
 
@@ -550,7 +549,7 @@
                         </div>
                         <input type="hidden" name="_subject" value="New Donation Pickup Request - SuperThrift">
                         <input type="hidden" name="_cc" value="marketing1@mercyhouseatc.com">
-                        <input type="hidden" name="_next" value="https://superthriftdeals.org/thank-you.html">
+                        <input type="hidden" name="_next" value="https://superthriftdeals.org/thank-you">
                         <button type="submit" class="btn btn-primary btn-full">Request Free Pickup</button>
                     </form>
                 </div>
@@ -633,6 +632,67 @@
         </div>
     </footer>
 
+    <!-- Submit to Formspree, then record the verified pickup request. -->
+    <script>
+      (function () {
+        var form = document.getElementById('donation-form');
+        if (!form) return;
+
+        var submitButton = form.querySelector('button[type="submit"]');
+        var originalButtonText = submitButton ? submitButton.textContent : '';
+        var redirectUrl = 'https://superthriftdeals.org/thank-you';
+        var submitting = false;
+
+        function redirectToThankYou() {
+          window.location.assign(redirectUrl);
+        }
+
+        form.addEventListener('submit', async function (event) {
+          event.preventDefault();
+
+          if (submitting || !form.reportValidity()) return;
+          submitting = true;
+
+          if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+          }
+
+          try {
+            var response = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (!response.ok) throw new Error('Formspree rejected the submission.');
+
+            var redirected = false;
+            var finish = function () {
+              if (redirected) return;
+              redirected = true;
+              redirectToThankYou();
+            };
+
+            gtag('event', 'conversion', {
+              'send_to': 'AW-17847156788/Tbt1CJ-iy-UcELSAmL5C',
+              'event_callback': finish,
+              'event_timeout': 2000
+            });
+
+            window.setTimeout(finish, 2200);
+          } catch (error) {
+            submitting = false;
+            if (submitButton) {
+              submitButton.disabled = false;
+              submitButton.textContent = originalButtonText;
+            }
+            window.alert('We could not send your request. Please try again or call (601) 768-3532.');
+          }
+        });
+      }());
+    </script>
+
     <!-- Formspree Formbutton Widget -->
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
     <script>
@@ -679,12 +739,6 @@
           button: {
             backgroundColor: "#dc2626"
           }
-        },
-        onSubmit: function() {
-          // Track conversion for Formbutton widget
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17766361797/BLGACM-42OwbELSAmL5C'
-          });
         }
       });
     </script>
