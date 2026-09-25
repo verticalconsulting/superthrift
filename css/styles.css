@@ -317,6 +317,20 @@ body {
     border-color: var(--white);
 }
 
+.hero-support-link {
+    margin: var(--space-md) 0 0;
+    font-size: 0.95rem;
+}
+
+.hero-support-link a {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.hero-support-link a:hover {
+    color: var(--gold);
+}
+
 @media (min-width: 768px) {
     .hero {
         padding: var(--space-2xl) 0;
