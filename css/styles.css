@@ -72,6 +72,160 @@ html {
     scroll-margin-top: 100px;
 }
 
+/* Local city landing pages */
+.city-hero {
+    color: var(--white);
+    padding: 5rem 0;
+    background: linear-gradient(120deg, rgba(29, 78, 216, 0.96), rgba(17, 24, 39, 0.94)), url('../images/superthrift-store.webp') center / cover;
+}
+
+.city-hero-byram {
+    background: linear-gradient(120deg, rgba(220, 38, 38, 0.94), rgba(17, 24, 39, 0.94)), url('../images/store-interior.webp') center / cover;
+}
+
+.city-hero-content {
+    max-width: 800px;
+}
+
+.city-hero h1 {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+}
+
+.city-hero p:not(.eyebrow) {
+    max-width: 720px;
+    font-size: 1.15rem;
+    margin-bottom: var(--space-lg);
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+}
+
+.city-details,
+.city-next-steps {
+    padding: var(--space-xl) 0;
+    background: var(--gray-50);
+}
+
+.city-details-grid,
+.next-step-grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+.city-detail-card,
+.next-step-card {
+    display: block;
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.city-detail-card h3,
+.next-step-card strong,
+.city-content h2,
+.city-content h3 {
+    color: var(--gray-900);
+}
+
+.next-step-card {
+    color: var(--gray-700);
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.next-step-card strong,
+.next-step-card span {
+    display: block;
+}
+
+.next-step-card span {
+    margin-top: var(--space-xs);
+}
+
+.next-step-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.city-content {
+    padding: var(--space-2xl) 0;
+}
+
+.city-content-alt {
+    background: var(--gray-50);
+}
+
+.city-content-grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.city-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+}
+
+.city-content h3 {
+    font-size: 1.25rem;
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.city-content p {
+    margin-bottom: var(--space-sm);
+}
+
+.city-content-image {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.inline-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.footer-simple {
+    text-align: center;
+}
+
+.footer-simple .footer-logo {
+    margin: 0 auto var(--space-sm);
+}
+
+.footer-simple a {
+    color: var(--white);
+}
+
+@media (min-width: 768px) {
+    .city-details-grid,
+    .next-step-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .city-content-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .city-content-reverse > :first-child {
+        order: 2;
+    }
+}
+
 body {
     font-family: var(--font-family);
     font-size: 16px;
@@ -919,6 +1073,17 @@ body {
 
 .location-details a:hover {
     color: var(--primary);
+}
+
+.location-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.location-actions .link-arrow {
+    margin-left: 0;
 }
 
 @media (min-width: 768px) {
