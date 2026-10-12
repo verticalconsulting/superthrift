@@ -1041,6 +1041,51 @@ body {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     text-align: center;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.location-card:hover,
+.location-card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg, 0 12px 28px rgba(0, 0, 0, 0.18));
+}
+
+.location-card:active {
+    transform: translateY(-2px);
+}
+
+/* Heading link stretches over the whole card; phone/directions links stay on top */
+.location-card-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.location-card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-lg);
+}
+
+.location-card-link:focus-visible::after {
+    outline: 3px solid var(--secondary);
+    outline-offset: 2px;
+}
+
+.location-card a:not(.location-card-link) {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .location-card,
+    .location-card:hover,
+    .location-card:focus-within,
+    .location-card:active {
+        transition: none;
+        transform: none;
+    }
 }
 
 .location-card h3 {
