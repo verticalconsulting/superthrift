@@ -1,11 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mercyhouseatc.superthriftdeals.org/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://superthriftdeals.org/</loc>
+	<lastmod>2026-10-18</lastmod>
   </url>
   <url>
-    <loc>https://mercyhouseatc.superthriftdeals.org/privacy-policy.html</loc>
-    <lastmod>2026-04-20</lastmod>
+    <loc>https://superthriftdeals.org/donate</loc>
+	<lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://superthriftdeals.org/pearl-thrift-store</loc>
+	<lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://superthriftdeals.org/byram-thrift-store</loc>
+	<lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://superthriftdeals.org/privacy-policy</loc>
+	<lastmod>2026-10-18</lastmod>
   </url>
 </urlset>
