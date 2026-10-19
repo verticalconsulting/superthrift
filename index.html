@@ -569,6 +569,9 @@
                             <label for="items">What items are you donating?</label>
                             <textarea id="items" name="items" rows="3" placeholder="Furniture, clothing, household items..." required></textarea>
                         </div>
+                        <div class="form-group">
+                            <div id="donation-turnstile"></div>
+                        </div>
                         <input type="hidden" name="_subject" value="New Donation Pickup Request - SuperThrift">
                         <input type="hidden" name="_cc" value="marketing1@mercyhouseatc.com">
                         <input type="hidden" name="_next" value="https://superthriftdeals.org/thank-you">
@@ -667,6 +670,28 @@
         var originalButtonText = submitButton ? submitButton.textContent : '';
         var redirectUrl = 'https://superthriftdeals.org/thank-you';
         var submitting = false;
+        var turnstileWidgetId = null;
+
+        // Called by the Turnstile script once it loads (render=explicit).
+        // Explicit rendering keeps the widget ID so a failed attempt can reset
+        // the single-use token before the visitor retries.
+        window.onTurnstileLoad = function () {
+          turnstileWidgetId = window.turnstile.render('#donation-turnstile', {
+            sitekey: '0x4AAAAAAFbwMc4ThLDUTj4z',
+            action: 'donation-pickup'
+          });
+        };
+
+        function getTurnstileToken() {
+          if (!window.turnstile || turnstileWidgetId === null) return '';
+          return window.turnstile.getResponse(turnstileWidgetId) || '';
+        }
+
+        function resetTurnstile() {
+          if (window.turnstile && turnstileWidgetId !== null) {
+            window.turnstile.reset(turnstileWidgetId);
+          }
+        }
 
         function redirectToThankYou() {
           window.location.assign(redirectUrl);
@@ -676,6 +701,12 @@
           event.preventDefault();
 
           if (submitting || !form.reportValidity()) return;
+
+          if (!getTurnstileToken()) {
+            window.alert('Please complete the security check, then send your request again.');
+            return;
+          }
+
           submitting = true;
 
           if (submitButton) {
@@ -708,6 +739,7 @@
             window.setTimeout(finish, 2200);
           } catch (error) {
             submitting = false;
+            resetTurnstile();
             if (submitButton) {
               submitButton.disabled = false;
               submitButton.textContent = originalButtonText;
@@ -717,6 +749,8 @@
         });
       }());
     </script>
+    <!-- Cloudflare Turnstile: the widget adds a cf-turnstile-response field that Formspree verifies -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
 
     <!-- Formspree Formbutton Widget -->
     <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
