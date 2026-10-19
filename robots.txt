@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mercyhouseatc.superthriftdeals.org/sitemap.xml
+Sitemap: https://superthriftdeals.org/sitemap.xml
