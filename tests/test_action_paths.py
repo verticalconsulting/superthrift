@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ['index.html', 'pearl-thrift-store.html', 'byram-thrift-store.html', 'privacy-policy.html']
+PAGES = ['index.html', 'donate.html', 'pearl-thrift-store.html', 'byram-thrift-store.html', 'privacy-policy.html']
 
 
 class Page(HTMLParser):
@@ -71,6 +71,7 @@ class ActionPaths(unittest.TestCase):
         html = (ROOT / 'index.html').read_text()
         links = self.pages['index.html'].links
         self.assertIn(('#schedule-pickup', 'Request a Donation Pickup'), links)
+        self.assertIn(('/donate', 'Request a Donation Pickup'), links)
         self.assertIn(('#locations', 'Find a Store to Shop'), links)
         self.assertIn(('#locations', 'Find a SuperThrift Location'), links)
         self.assertNotIn('>Donate Now<', html)
@@ -81,6 +82,21 @@ class ActionPaths(unittest.TestCase):
         self.assertIn('SuperThrift must confirm the items, address, and timing.', html)
         shop = re.search(r'<section id="shop".*?</section>', html, re.S).group()
         self.assertEqual(shop.count('href="#locations"'), 1)
+
+    def test_donate_page_destinations_and_form(self):
+        html = (ROOT / 'donate.html').read_text()
+        links = self.pages['donate.html'].links
+        self.assertIn(('#schedule-pickup', 'Request a Donation Pickup'), links)
+        self.assertIn(('index.html#locations', 'Find a SuperThrift Location'), links)
+        self.assertEqual(len(self.pages['donate.html'].forms), 1)
+        self.assertEqual(self.pages['donate.html'].forms[0]['action'], 'https://formspree.io/f/xzdekbzd')
+        self.assertEqual(self.pages['donate.html'].forms[0]['method'], 'POST')
+        visible = {attrs['name']: attrs for _, attrs in self.pages['donate.html'].fields if attrs.get('type') != 'hidden'}
+        self.assertEqual(set(visible), {'name', 'phone', 'email', 'address', 'location', 'items'})
+        self.assertTrue(all('required' in attrs for attrs in visible.values()))
+        self.assertIn('it does not confirm an appointment', html)
+        self.assertIn('SuperThrift must confirm the items, address, and timing.', html)
+        self.assertNotIn('signup', html.lower())
 
     def test_city_hero_and_exact_directions(self):
         expected = {'pearl': '434 N Bierdeman Rd Pearl MS 39208', 'byram': '6787 S Siwell Rd STE D Byram MS 39272'}

@@ -112,7 +112,7 @@ check("home: sections intact", all(
 privacy = page("privacy-policy.html")
 check("privacy: H1 unchanged", "MERCY HOUSE ATC PRIVACY POLICY" in privacy)
 sitemap = page("sitemap.xml")
-check("sitemap: four existing entries", sitemap.count("<loc>") == 4)
+check("sitemap: five entries including donate", sitemap.count("<loc>") == 5)
 for loc in (
     "https://superthriftdeals.org/",
     "https://superthriftdeals.org/pearl-thrift-store.html",
@@ -123,7 +123,7 @@ for loc in (
 check("form: transport preserved",
       'action="https://formspree.io/f/xzdekbzd"' in home)
 check("workflow: deploy untouched",
-      "cloudflare/pages-action@v1" in page(".github/workflows/deploy.yml"))
+      "wrangler-action@v3" in page(".github/workflows/deploy.yml"))
 
 if FAILS:
     print(f"FAIL ({len(FAILS)}):")
