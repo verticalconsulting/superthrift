@@ -869,6 +869,16 @@ body {
     margin-bottom: 0.4rem;
 }
 
+.after-send-note {
+    margin: 0 0 var(--space-lg);
+    color: var(--gray-500);
+    font-size: 0.95rem;
+}
+
+.after-send-note strong {
+    color: var(--gray-900);
+}
+
 .noscript-answer {
     padding: var(--space-lg) 0;
     background: #fff7ed;
