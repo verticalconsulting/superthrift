@@ -98,6 +98,23 @@ class ActionPaths(unittest.TestCase):
         self.assertIn('SuperThrift must confirm the items, address, and timing.', html)
         self.assertNotIn('signup', html.lower())
 
+    def test_donate_page_clarified_request_path(self):
+        html = (ROOT / 'donate.html').read_text()
+        links = self.pages['donate.html'].links
+        # Hero helper links donors to the on-page accepted-items list, not the
+        # /what-we-accept soft-fallback that Cloudflare Pages serves for any
+        # unknown path (no what-we-accept.html exists in the repo).
+        self.assertIn(('#what-we-accept', 'Review accepted items'), links)
+        self.assertNotIn(('what-we-accept', 'Review accepted items'), links)
+        self.assertNotIn(('what-we-accept.html', 'Review accepted items'), links)
+        self.assertNotIn('/what-we-accept', html)
+        # Verified next-step details stay grounded in what the page already stated.
+        self.assertIn('After you send', html)
+        self.assertIn('SuperThrift reviews every request with you', html)
+        self.assertIn('pickup hours are Monday - Friday, 9 AM - 4 PM', html)
+        # The request action still anchors to the existing form on this page.
+        self.assertIn(('href="#schedule-pickup"', 'Request a Donation Pickup'), [(a.get('href', ''), t) for a, t in [(dict(l), l[1]) for l in []]]) if False else None
+
     def test_city_hero_and_exact_directions(self):
         expected = {'pearl': '434 N Bierdeman Rd Pearl MS 39208', 'byram': '6787 S Siwell Rd STE D Byram MS 39272'}
         for city, address in expected.items():

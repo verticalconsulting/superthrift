@@ -29,6 +29,7 @@ Open `index.html` directly in a web browser. No build process required. `wrangle
 ```
 superthrift/
 ├── index.html          # Main landing page (Google Ads optimized)
+├── donate.html         # Dedicated donation pickup request page (hero → on-page accepted-items section → Formspree form)
 ├── privacy-policy.html # Current, indexed privacy policy (linked from footer, in sitemap.xml)
 ├── privacy.html         # Legacy privacy policy duplicate — noindex, canonical points to privacy-policy.html; kept for old inbound links
 ├── thank-you.html       # Post-submission redirect target for the donation form (see Form Handling)
